@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Balls</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			border-radius: 50%;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			position: absolute;
+			border-radius: 50%;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: linear-gradient(to top, #E4AF9D 20%, #E4E4D8 50%, #A19887 80%);
+			position: absolute;
+			border-radius: 50%;
+		}
+		.btn{
+			width: 100px;
+			height: 80px;
+			position: absolute;
+			background-color: green;
+			border-radius: 10px;
+			border-color: pink;
+			color: white;
+			font-size: 20px;
+			margin-left: 910px;
+		}
+		.point{
+			position: absolute;
+			left: 1030px;
+			font-size: 25px;
+		}
+		.time{
+			position: absolute;
+			left: 770px;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="lose.png" style="display: none;" class="lose">
+	<img src="Siel.jpg" style="display: none;" class="Win">
+
+	<div class="otec">
+
+	<p class="point">Очки: 0</p>
+	<p class="time">Осталось: 10</p>
+	<button class="btn">Начать</button>
+
+
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+
+	<div class="box1"></div>
+	<div class="box1"></div>
+	<div class="box1"></div>
+	<div class="box1"></div>
+	<div class="box1"></div>
+
+	<div class="box2"></div>
+	<div class="box2"></div>
+	<div class="box2"></div>
+	<div class="box2"></div>
+	<div class="box2"></div>
+
+	</div>
+
+<script type="text/javascript">
+	let red=document.querySelectorAll('.box')
+	let yellow=document.querySelectorAll('.box1')
+	let raduga=document.querySelectorAll('.box2')
+	let btn=document.querySelector('.btn')
+	let point=document.querySelector('.point')
+	let time=document.querySelector('.time')
+	let a=0;
+	let b=0;
+	let c=0;
+	let t=10;
+	let p=0;
+	let pos=1200;
+	let pos1=200;
+	let pos2=900;
+	let pos3=400;
+	let pos4=70;
+	let pos5=150;
+	let pos6=270;
+	let pos7=300;
+	let pos8=1450;
+	let pos9=900;
+	let pos10=100;
+	let pos11=1000;
+	let pos111=200;
+	let pos12=200;
+	let pos122=300;
+	let pos13=400;
+	let pos14=1110;
+	let pos144=500;
+
+	
+	for(let i=0; i<5; i=i+1){
+		a=a+100
+		red[i].style.top=a+"px";
+		red[0].style.left="1200px"
+		red[1].style.left="1300px"
+		red[2].style.left="900px"
+		red[3].style.left="600px"
+		red[4].style.left="70px"
+	}
+
+	for(let i=0; i<5; i=i+1){
+		b=b+100
+		yellow[i].style.top=b+"px";
+		yellow[0].style.left="150px";
+		yellow[1].style.left="270px";
+		yellow[2].style.left="780px";
+		yellow[3].style.left="1450px";
+		yellow[4].style.left="900px";
+	}
+	
+	for(let i=0; i<5; i=i+1){
+		c=c+100
+		raduga[i].style.top=c+"px";
+		raduga[0].style.left="50px";
+		raduga[1].style.left="1000px";
+		raduga[2].style.left="200px";
+		raduga[3].style.left="1300px";
+		raduga[4].style.left="1110px";
+	}
+
+	btn.onclick=function(){
+		setInterval(moveLeft, 1000);
+		setInterval(moveLeft1, 1000);
+		setInterval(moveLeft2, 1000);
+		setInterval(moveLeft3, 1000);
+		setInterval(moveLeft4, 1000);
+		setInterval(moveLeft5, 1000);
+		setInterval(moveLeft6, 1000);
+		setInterval(moveLeft7, 1000);
+		setInterval(moveLeft8, 1000);
+		setInterval(moveLeft9, 1000);
+		setInterval(moveLeft10, 1000);
+		setInterval(moveLeft11, 1000);
+		setInterval(moveLeft12, 1000);
+		setInterval(moveLeft13, 1000);
+		setInterval(moveLeft14, 1000);
+		setInterval(deadline, 1000);
+	}	
+
+	let moveLeft=function(arg){
+		pos=pos-50;
+		red[0].style.left=pos+"px";
+		red[0].style.transition="1s";
+		red[0].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			red[0].style.display="none";
+		}
+	}
+
+	let moveLeft1=function(arg){
+		pos1=pos1+50;
+		red[1].style.top=pos1+"px";
+		red[1].style.transition="1s";
+		red[1].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			red[1].style.display="none";
+		}
+	}
+
+	let moveLeft2=function(arg){
+		pos2=pos2+40;
+		red[2].style.left=pos2+"px";
+		red[2].style.transition="1s";
+		red[2].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			red[2].style.display="none";
+		}
+	}
+
+	let moveLeft3=function(arg){
+		pos3=pos3-40;
+		red[3].style.top=pos3+"px";
+		red[3].style.transition="1s";
+		red[3].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			red[3].style.display="none";
+		}
+	}
+
+	let moveLeft4=function(arg){
+		pos4=pos4+50;
+		red[4].style.left=pos4+"px";
+		red[4].style.transition="1s";
+		red[4].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			red[4].style.display="none";
+		}
+	}
+
+	let moveLeft5=function(arg){
+		pos5=pos5+70;
+		yellow[0].style.left=pos5+"px";
+		yellow[0].style.transition="1s";
+		yellow[0].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			yellow[0].style.display="none";
+		}
+	}
+
+	let moveLeft6=function(arg){
+		pos6=pos6+30;
+		yellow[1].style.left=pos6+"px";
+		yellow[1].style.transition="1s";
+		yellow[1].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			yellow[1].style.display="none";
+		}
+	}
+
+	let moveLeft7=function(arg){
+		pos7=pos7-90;
+		yellow[2].style.top=pos7+"px";
+		yellow[2].style.transition="1s";
+		yellow[2].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			yellow[2].style.display="none";
+		}
+	}
+
+	let moveLeft8=function(arg){
+		pos8=pos8-50;
+		yellow[3].style.left=pos8+"px";
+		yellow[3].style.transition="1s";
+		yellow[3].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			yellow[3].style.display="none";
+		}
+	}
+
+	let moveLeft9=function(arg){
+		pos9=pos9+50;
+		yellow[4].style.left=pos9+"px";
+		yellow[4].style.transition="1s";
+		yellow[4].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			yellow[4].style.display="none";
+		}
+	}
+
+	let moveLeft10=function(arg){
+		pos10=pos10+50;
+		raduga[0].style.left=pos10+"px";
+		raduga[0].style.transition="1s";
+		raduga[0].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			raduga[0].style.display="none";
+		}
+	}
+
+	let moveLeft11=function(arg){
+		pos11=pos11+50;
+		pos111=pos111+50;
+		raduga[1].style.left=pos11+"px";
+		raduga[1].style.top=pos111+"px";
+		raduga[1].style.transition="1s";
+		raduga[1].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			raduga[1].style.display="none";
+		}
+	}
+
+	let moveLeft12=function(arg){
+		pos12=pos12+50;
+		pos122=pos122+50;
+		raduga[2].style.left=pos12+"px";
+		raduga[2].style.top=pos122+"px";
+		raduga[2].style.transition="1s";
+		raduga[2].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			raduga[2].style.display="none";
+		}
+	}
+
+	let moveLeft13=function(arg){
+		pos13=pos13+50;
+		raduga[3].style.top=pos13+"px";
+		raduga[3].style.transition="1s";
+		raduga[3].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			raduga[3].style.display="none";
+		}
+	}
+
+	let moveLeft14=function(arg){
+		pos14=pos14+50;
+		pos144=pos144+50;
+		raduga[4].style.left=pos14+"px";
+		raduga[4].style.top=pos144+"px";
+		raduga[4].style.transition="1s";
+		raduga[4].onclick=function() {
+			p=p+1;
+			point.innerHTML="Очки: "+p;
+			raduga[4].style.display="none";
+		}
+	}
+
+	let deadline=function(arg){
+		t=t-1;
+		time.innerHTML="Осталось: "+t;
+		time.style.transition="0.5s";
+		if(t==0){
+			document.querySelector('.otec').style.display="none";
+			document.querySelector('.lose').style.display="block";
+		}
+		if(p==15){
+		t=10;
+		document.querySelector('.otec').style.display="none";
+		document.querySelector('.Win').style.display="block";
+	}
+	}
+
+	
+</script>
+</body>
+</html>
